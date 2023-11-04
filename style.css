@@ -1,0 +1,68 @@
+body {
+    transition: background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #fff;
+    background-image: none;
+}
+
+#theme-button {
+    width: 50px;
+    height: 25px;
+    background-color: #333;
+    border: none;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.ball {
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 0.5s;
+}
+
+.move-right {
+    left: 25px;
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+    animation: stars 2s linear infinite;
+}
+
+.dark-theme #theme-button {
+    background-color: #ccc;
+}
+
+@keyframes stars {
+    0% {
+        background-image: none;
+    }
+    25% {
+        background-image: url(/BotãoSimples/imgs/star1.png);
+        background-size: 50px;
+    }
+    50% {
+        background-image: url(/BotãoSimples/imgs/star2.png);
+        background-size: 50px;
+    }
+    75% {
+        background-image: url(/BotãoSimples/imgs/star3.png);
+        background-size: 50px;
+    }
+    100% {
+        background-image: url(/BotãoSimples/imgs/star4.png);
+        background-size: 50px;
+    }
+}
